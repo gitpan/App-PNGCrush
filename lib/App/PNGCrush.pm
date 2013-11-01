@@ -3,7 +3,7 @@ package App::PNGCrush;
 use warnings;
 use strict;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use Carp;
 use Proc::Reliable;
@@ -183,6 +183,8 @@ sub _set_error {
 1;
 __END__
 
+=encoding utf8
+
 =head1 NAME
 
 App::PNGCrush - Perl wrapper around ``pngcrush'' program
@@ -248,13 +250,13 @@ Instructs the object to run C<pngcrush>. The first argument is mandatory
 and must be a filename which will be passed to C<pngcrush> as input file.
 Takes one optional argument (so far), which is passed as key/value
 pair; the key being C<opts> and value being an arrayref of custom options
-you want to give to C<pngcrush> (those will bypass shell proccessing).
+you want to give to C<pngcrush> (those will bypass shell processing).
 Generally the custom options option is in here "just in case" and B<you
 are recommended to set options via individual methods or C<set_options()>
 method (see below).>
 
 Returns either C<undef> or an empty list (depending on the context)
-if an error occured and the reason for the error will be available via
+if an error occurred and the reason for the error will be available via
 C<error()> method. On success returns a hashref with the following
 keys/values:
 

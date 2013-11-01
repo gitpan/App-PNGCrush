@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use lib '../lib';
+use lib qw(../lib lib);
 use App::PNGCrush;
 
 die "Usage: perl crush.pl <pic_to_crush>"
